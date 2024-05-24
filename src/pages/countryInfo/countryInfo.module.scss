@@ -1,0 +1,108 @@
+.root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 90vh;
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 100px;
+        max-width: 1440px;
+        padding: 40px 100px;
+    }
+
+    .backBtn {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        width: 100px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .flag {
+        max-width: 600px;
+        width: 50%;
+    }
+
+    .infoContainer {
+        display: flex;
+        align-items: center;
+        min-height: 400px;
+        gap: 100px;
+
+        .countryInfo {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .name {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .items {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    display: flex;
+                    gap: 10px;
+
+                    .type {
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+
+                    .typeInfo {
+                        font-weight: 300;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .borders {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .type {
+                    font-weight: 600;
+                }
+
+                .typeInfoBorder {
+                    padding: 10px;
+                    font-weight: 300;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .root {
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        .flag {
+            width: 300px;
+            min-width: 50%;
+        }
+
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

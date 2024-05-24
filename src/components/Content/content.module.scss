@@ -1,0 +1,122 @@
+.root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 90vh;
+
+    .container {
+        flex: 1;
+        width: 100%;
+        max-width: 1440px;
+        padding: 40px 100px;
+
+        .inputs {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .searchFor {
+                display: flex;
+                align-items: center;
+                box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+
+                input {
+                    padding: 23px 15px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border-radius: 8px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .searchByRegion {
+                position: relative;
+                box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                font-weight: 600;
+
+                .sortBy {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    gap: 20px;
+                    cursor: pointer;
+                }
+
+                .regions {
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 20px;
+                    max-width: 150px;
+                    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s opacity ease-in-out;
+                    .region {
+                        cursor: pointer;
+                    }
+
+                    &.show {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        .carts {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-block: 40px;
+
+            .cart {
+                flex: 1;
+                max-width: 280px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .root {
+        .container {
+            padding: 40px 20px;
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+
+                .searchFor {
+                    width: 50%;
+                    min-width: 250px;
+                    margin-bottom: 20px;
+
+                    input {
+                        padding: 15px;
+                    }
+                }
+
+                .searchByRegion {
+                    width: 50%;
+                    min-width: 250px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
